@@ -1,0 +1,6 @@
+default:
+  description: "Simulated bench with oscilloscope, PSU, and DMM."
+  devices:
+    - Scope1
+    - PSU1
+    - DMM1
