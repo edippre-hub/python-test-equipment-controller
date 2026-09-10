@@ -1,0 +1,28 @@
+[project]
+name = "python-test-equipment-controller"
+version = "0.1.0"
+description = "Python Test Equipment Controller for oscilloscopes, power supplies, NI hardware, and electronic test systems."
+authors = [{ name = "Eva Dippre" }]
+requires-python = ">=3.10"
+dependencies = [
+    "pyvisa>=1.13.0",
+    "pyyaml>=6.0",
+    "rich>=13.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-cov>=4.0",
+    "mypy>=1.0",
+    "ruff>=0.5",
+]
+
+[project.scripts]
+tec = "test_equipment_controller.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
